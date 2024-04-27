@@ -1,73 +1,40 @@
 ---
+import Navbar from "../components/navbar.astro";
 import { Image } from "astro:assets";
 ---
-
-<html lang="en" class="bg-zinc-900 text-white" <head>
-  <title>cmykquinn</title>
-  <link rel="preconnect" href="https://rsms.me/" /><link
-    rel="stylesheet"
-    href="https://rsms.me/inter/inter.css"
-  />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <body>
-    <ul class="flex items-center pt-5">
-      <li class="px-4"><a href="/">Home</a></li>
-      <li class="px-4"><a href="/blog">Blog</a></li>
-      <li class="px-4"><a href="/projects">Projects</a></li>
-      <li class="px-4"><a href="/me">About</a></li>
-      <li id="date-time" class="text-right font-bold ml-auto px-4"></li>
-    </ul>
-    <h1 class="text-4xl font-bold underline pt-10 pl-10 sm:pl-5">cmykquinn</h1>
-    <div class="flex pl-10 py-3 sm:pl-5">
-      <Image
-        src="https://i.imgur.com/10ttDG2.png"
-        alt="Transgender"
-        inferSize={true}
-        loading="eager"
-      />
-      <Image
-        src="https://i.imgur.com/oYdS4J9.png"
-        alt="Malwaregender"
-        inferSize={true}
-        loading="eager"
-      />
-      <Image
-        src="https://i.imgur.com/HdmxfuE.png"
-        alt="They/Them"
-        inferSize={true}
-        loading="eager"
-      />
-    </div>
-    <p class="pl-11 md:pl-7">
-      programmer by day... <br /> producer and writer by night
+ <script src="clock/app.js" type="text/javascript"></script>
+  <Navbar/>
+   <div class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      <h1 class="text-4xl font-bold text-center pb-7">cmykquinn</h1>
+    <p class=" text-center pb-4">
+      programmer by day... <br> music producer & writer by night
     </p>
-    <h1 class="text-4xl font-bold underline py-10 pl-10 sm:pl-5">Find Me</h1>
     <div>
-      <ul class="list-disc px-10 list-inside md:px-5">
-        <li><a href="mailto:seaprano@disroot.org">E-mail</a></li>
-        <li><a href="https://x.com/cmykquinn">Twitter</a></li>
-        <li>
-          <a href="https://discord.com/users/1017067177796456469">Discord</a>
+      <ul class="text-3xl grid sm:flex justify-center text-4xl">
+        <li class="px-5"><a class="nf nf-fa-envelope" aria-label="email" href="mailto:seaprano@disroot.org" target="_blank"><a class="visible sm:hidden pl-1">Email</a></a></li>
+        <li class="px-5"><a class="nf nf-fa-twitter" aria-label="Twitter also known as x" href="https://x.com/cmykquinn" target="_blank"><a class="visible sm:hidden pl-1">Twitter</a></a></li>
+        <li class="px-5">
+          <a class="nf nf-fa-discord" aria-label="Discord" href="https://discord.com/users/1017067177796456469" target="_blank"><a class="visible sm:hidden pl-1">Discord</a></a>
         </li>
-        <li><a href="https://soundcloud.com/cmykquinn">Soundcloud</a></li>
+        <li class="px-5"><a class="nf nf-fa-instagram" aria-label="Instagram" href="https://instagram.com/cmykquinn" target="_blank"><a class="visible sm:hidden pl-1">Instagram</a></a></li>
+        <li class="px-5"><a class="nf nf-fa-soundcloud" aria-label="SoundCloud" href="https://soundcloud.com/cmykquinn" target="_blank"><a class="visible sm:hidden pl-1">SoundCloud</a></a></li>
+        <li class="px-5"><a class="nf nf-fa-tv" href="https://anilist.co/user/seaprano" aria-label="Anime watching list" target="_blank"><a class="visible sm:hidden pl-1">Anilist</a></a></li>
+        <li class="px-5"><a class="nf nf-fa-github" aria-label="GitHub" href="https://github.com/cmykquinn" target="_blank"><a class="visible sm:hidden pl-1">Github</a></a></li>
       </ul>
     </div>
-    <br />
-    <div class="text-sm opacity-50 flex justify-center items-center">
-      <p>Made with luv by cmykquinn with astro, tailwindcss and &nbsp</p>
-      <p>
-        <a href="https://www1.flightrising.com/forums/cc/3078623">
-          <Image
-            src="https://i.imgur.com/YMPbu9R.png"
-            alt="FREE BUTTONS"
-            inferSize={true}
-            loading="eager"
-          />
-        </a>
-      </p>
+       <div class="text-sm opacity-50 text-center pt-5 ">
+      <p>Made with <i class="nf nf-fa-heart"></i> by cmykquinn with astro, tailwindcss and nerdfonts</p>
     </div>
+   </div>
+    <br />
+    <a href="https://stats.fm/cmykquinn" target="_blank">
+  <Image class="absolute bottom-0 left-0 pl-0 sm: left-1 w-auto h-auto items-center "
+  src="https://spotify-github-profile.vercel.app/api/view?uid=31chu7pwyztmssyhorvngkijm6eu&cover_image=false&theme=default&show_offline=true&background_color=000000&interchange=true&bar_color=53b14f&bar_color_cover=true"
+  alt="spotify widget"
+  inferSize={true}
+  loading="eager"
+/>
+</a>
 
     <style is:global>
       :root {
@@ -81,7 +48,11 @@ import { Image } from "astro:assets";
           font-family: InterVariable, sans-serif;
         }
       }
+      li,ul {
+         -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+        font-smooth: auto;
+      }
     </style>
-    <script src="clock/app.js" type="text/javascript"></script>
   </body>
 </html>
