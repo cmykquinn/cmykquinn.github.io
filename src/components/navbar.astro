@@ -2,11 +2,11 @@
 ---
 
 	<nav class="pt-5 text-center bg-slate-900 bg-opacity-50 py-5">
-      <a class="px-5 hover:underline" href="/">Home</a>
-      <a class="px-5 hover:underline" href="/about">About</a>
-      <a class="px-5 font-bold" id="date-time" href="/"></a>
-      <a class="px-5 hover:underline" href="/contact">Contact</a>
-      <a class="px-5 hover:underline" href="/projects">Projects</a>
+      <a class="px-1 hover:underline sm:px-5" href="/">Home</a>
+      <a class="px-1 hover:underline sm:px-5" href="/now">Now</a>
+      <a class="font-bold" id="date-time" href="/"></a>
+      <a class="px-1 hover:underline sm:px-5" href="/projects">Projects</a>
+      <a class="px-1 hover:underline sm:px-5" href="/tunes">Music</a>
 	</nav>
 
       <script>
@@ -23,9 +23,7 @@
 
     const hourTime = hour > 12 ? hour - 12 : hour;
 
-    const ampm = hour < 12 ? "AM" : "PM";
-
-    const time = hourTime + ":" + minute + ":" + ampm;
+    const time = hourTime + ":" + minute
     const dateTime = time;
     document.getElementById("date-time").innerHTML = dateTime;
     setTimeout(clock, 1000);
